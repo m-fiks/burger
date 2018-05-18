@@ -3,22 +3,23 @@ console.log(connection);
 
 const orm = {
 
-selectAll: function () {
-    connection.query("SELECT * FROM burgers", (err, response) => {
-        if (err){
-            throw err;
-        }
-        console.log(response);
-        connection.end();
-        })
-    },
+    all: function (cb) {
+        connection.query("SELECT * FROM burgers", (err, result) => {
+            if (err) throw err;
+            
+            cb(result);
 
-insertOne: function () {
-    connection.query("INSERT INTO burgers ")
-    },
+            })
+        },
 
-updateOne: function () {
+// insertOne: function () {
+//     connection.query("INSERT INTO burgers ")
+//     },
 
-    }
-    
+// updateOne: function () {
+
+//     }
 };
+
+//export to model file
+module.exports = orm;

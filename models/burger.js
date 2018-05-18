@@ -1,3 +1,12 @@
 const orm = require("../config/orm.js");
 
-console.log(orm);
+const burger = {
+    all: function(cb){
+        orm.all(function(res) {
+            cb(res);
+        })
+    }
+}
+
+
+module.exports = burger;

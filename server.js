@@ -12,7 +12,7 @@ app.engine("handlebars", hbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // parse application/json
 app.use(bodyParser.json());
@@ -20,9 +20,10 @@ app.use(bodyParser.json());
 //static path
 app.use(express.static(path.join(__dirname, "/models/public")));
 
-app.get("/", (req,res) => {
-    res.render("index", {burger: "cheese"});
-})
+//require routes
+const routes = require("./controllers/burgers_controller.js");
+app.use(routes)
+
 
 app.listen(PORT, () => {
     console.log(`Listening on port: ${PORT}`)

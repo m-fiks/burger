@@ -15,4 +15,5 @@ connection.connect((err) => {
     console.log(`connected to db`);
 })
 
+//export to ORM file
 module.exports = connection;
