@@ -7,8 +7,8 @@ const burger = {
         })
     },
 
-    add: function(cb) {
-        orm.insertOne(function(res) {
+    create: function(name, cb) {
+        orm.insertOne(name, function(res) {
             cb(res);
         })
     }

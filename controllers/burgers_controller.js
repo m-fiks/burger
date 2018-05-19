@@ -18,9 +18,15 @@ router.get("/", (req,res) => {
 })
 
 router.post("/burgers/create", (req,res) => {
-    console.log(req.body.new_burger);
-    res.send(req.body)
- 
+    burger.create(
+        req.body.new_burger,
+    function(result) {
+        //console.log('succesful')
+        //res.json({ id: result.insertId })
+
+        //bring user back to root page
+        res.redirect("/");
+    })
 })
 //export routes for server to use
 module.exports = router;

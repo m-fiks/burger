@@ -12,8 +12,8 @@ const orm = {
             })
         },
 
-    insertOne: function () {
-        connection.query("INSERT INTO burgers(burger_name, devoured) VALUES (?, false)", [req.body.new_burger], (err, result) => {
+    insertOne: function (name, cb) {
+        connection.query("INSERT INTO burgers(burger_name, devoured) VALUES ( ?, false)", [name], (err, result) => {
             if (err) throw err;
             cb(result);
         })
