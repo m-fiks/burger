@@ -1,17 +1,17 @@
 <br>
-<h1>Burgers</h1>
+<h1>Eat-Da-Burger!</h1>
 <br>
 <div class="row">
 <div class="col-xs-12 col-md-6">
     <ul>
+        <h5>Burgers</h5>
         {{#each burgers}}
         <!--not devoured-->
             {{#unless devoured}}
                 <li>
                     <p>{{ burger_name }}
-                        <button data-id="{{this.id}}" class="devour">Devour</button>
+                        <button data-id="{{this.id}}" class="btn btn-warning btn-xs" id="devour">Devour</button>
                     </p>
-                    <br>
                 </li>
             {{/unless}}
         {{/each}}
@@ -19,13 +19,13 @@
 </div>
 
 <div class="col-xs-12 col-md-6" style="float:right">
+    <h5>Already Devoured</h5>
     <ul>
         {{#each burgers}}
             {{#if devoured}}
                 <li>
                     <p>{{ burger_name }}
                     </p>
-                    <br>
                 </li>
             {{/if}}
         {{/each}}
@@ -34,17 +34,16 @@
 
 </div>
 
+<!--add a burger-->
 <div class="row">
     <div class="col-xs-12 col-md-3"></div>
     <div class="col-xs-12 col-md-6">
         <!-- user add in burger name - default to 0 for devoured-->
-        <form>
-            <div class="form-group">
-                <label for="submit-burger">Submit a Burger</label>
-                <input type="text" class="form-control" id="submit-burger">
-                <br>
-                <button type="submit" class="btn btn-info">Submit</button>
-            </div>
+        <form action="/burgers/create" method="POST">
+            <label>Submit a Burger</label>
+            <input name="new_burger" type="text" class="form-control">
+            <br>
+            <button class="btn btn-info">Submit</button>
         </form>
     </div>
     <div class="col-xs-12 col-md-3"></div>

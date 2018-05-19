@@ -5,6 +5,12 @@ const burger = {
         orm.all(function(res) {
             cb(res);
         })
+    },
+
+    add: function(cb) {
+        orm.insertOne(function(res) {
+            cb(res);
+        })
     }
 }
 

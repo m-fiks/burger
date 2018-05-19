@@ -1,5 +1,5 @@
 const connection = require("../config/connection.js");
-console.log(connection);
+//console.log(connection);
 
 const orm = {
 
@@ -12,9 +12,12 @@ const orm = {
             })
         },
 
-// insertOne: function () {
-//     connection.query("INSERT INTO burgers ")
-//     },
+    insertOne: function () {
+        connection.query("INSERT INTO burgers(burger_name, devoured) VALUES (?, false)", [req.body.new_burger], (err, result) => {
+            if (err) throw err;
+            cb(result);
+        })
+    },
 
 // updateOne: function () {
 
