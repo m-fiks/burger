@@ -28,5 +28,11 @@ router.post("/burgers/create", (req,res) => {
         res.redirect("/");
     })
 })
+
+router.put("/burgers/:id", (req,res) => {
+
+    console.log(req.params.id);
+    res.send("hi");
+})
 //export routes for server to use
 module.exports = router;

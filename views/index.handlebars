@@ -9,9 +9,12 @@
         <!--not devoured-->
             {{#unless devoured}}
                 <li>
-                    <p>{{ burger_name }}
-                        <button data-id="{{this.id}}" class="btn btn-warning btn-xs" id="devour">Devour</button>
-                    </p>
+                    <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+                    <input name="devour" type="hidden" class="form-control">
+                        <p>{{ burger_name }}
+                        <button type="submit" data-id="{{this.id}}" class="btn btn-warning btn-xs" id="devour">Devour</button>
+                        </p>
+                    </form>
                 </li>
             {{/unless}}
         {{/each}}
