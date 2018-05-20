@@ -7,7 +7,7 @@ const burger = require("../models/burger.js")
 
 router.get("/", (req,res) => {
     //console.log("this is the res:" , res)
-    burger.all(function(data) {
+    burger.all((data) => {
     //console.log("this is the data:", data)
      const burgOb = {
          burgers: data,
@@ -20,7 +20,7 @@ router.get("/", (req,res) => {
 router.post("/burgers/create", (req,res) => {
     burger.create(
         req.body.new_burger,
-    function(result) {
+        (result) => {
         //console.log('succesful')
         //res.json({ id: result.insertId })
 
@@ -32,7 +32,7 @@ router.post("/burgers/create", (req,res) => {
 router.put("/burgers/:id", (req,res) => {
     burger.update(
         req.params.id, 
-            function (result) {
+            (result) => {
             //console.log('updated');
             res.redirect("/")
         })    
