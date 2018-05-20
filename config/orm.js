@@ -19,10 +19,19 @@ const orm = {
         })
     },
 
-// updateOne: function () {
-
-//     }
+    updateOne: function (devoured, id, cb) {
+        let queryString = `UPDATE burgers SET `
+        queryString += `devoured = ${devoured} `
+        queryString+= `WHERE id = ${id} `
+        console.log(queryString);
+        connection.query(queryString, (err,result) => {
+            if (err) throw err;
+            cb(result);
+        })
+    }
 };
+
+orm.updateOne();
 
 //export to model file
 module.exports = orm;
