@@ -30,9 +30,12 @@ router.post("/burgers/create", (req,res) => {
 })
 
 router.put("/burgers/:id", (req,res) => {
-
-    console.log(req.params.id);
-    res.send("hi");
+    burger.update(
+        req.params.id, 
+            function (result) {
+            //console.log('updated');
+            res.redirect("/")
+        })    
 })
 //export routes for server to use
 module.exports = router;
