@@ -1,5 +1,6 @@
 #main {
-    background-color: rgba(0, 255, 0, 0.288)
+    background-color: rgba(0, 255, 0, 0.288);
+    font-family: 'Merriweather', sans-serif;
 }
 ul {
     list-style-type: none;

@@ -1,5 +1,5 @@
 <br>
-<h1>Eat-Da-Burger!</h1>
+<h1 style="font-family: 'Archivo Narrow', sans-serif;color:rgb(34, 26, 122)">Eat-Da-Burger!</h1>
 <br>
 <div class="row">
 <div class="col-xs-12 col-md-6">
@@ -12,7 +12,7 @@
                     <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
                     <input name="devour" type="hidden" class="form-control">
                         <p>{{ burger_name }}
-                        <button type="submit" data-id="{{this.id}}" class="btn btn-warning btn-xs" id="devour">Devour</button>
+                        <button type="submit" data-id="{{this.id}}" class="btn btn-warning btn-xs" id="devour" style="font-family: 'Archivo Narrow', sans-serif">Devour</button>
                         </p>
                     </form>
                 </li>
@@ -23,7 +23,7 @@
 
 <div class="col-xs-12 col-md-6" style="float:right">
     <h5>Already Devoured</h5>
-    <ul>
+    <ul style="opacity:0.8">
         {{#each burgers}}
             {{#if devoured}}
                 <li>
@@ -46,7 +46,7 @@
             <label>Submit a Burger</label>
             <input name="new_burger" type="text" class="form-control">
             <br>
-            <button class="btn btn-info">Submit</button>
+            <button class="btn btn-info" style="font-family: 'Archivo Narrow', sans-serif">Submit</button>
         </form>
     </div>
     <div class="col-xs-12 col-md-3"></div>
