@@ -1,7 +1,7 @@
 const mysql = require("mysql");
 
 let connection;
-if(process.env.JAWSDB_URL) {
+if (process.env.JAWSDB_URL) {
     //Heroku deployment
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
@@ -11,6 +11,8 @@ if(process.env.JAWSDB_URL) {
     password: "",
     database: "burgers_db"
 })
+
+};
 
 connection.connect((err) => {
     if (err){
