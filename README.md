@@ -1,6 +1,6 @@
 # Eat-Da-Burger
 
-**Eat-Da-Burger is a simple application that lets users submit the name of a burger they would like to eat. This burger is stored in a database and displayed to the page. Upon clicking a button, 'devour', the burger will be moved to a separate column that displays all of the burgers that have been devoured.**
+**Eat-Da-Burger is a simple full stack application that lets users submit the name of a burger they would like to eat. This burger is stored in a database and displayed to the page. Upon clicking a button, 'devour', the burger will be moved to a separate column that displays all of the burgers that have been devoured.**
 
 
 **Deployed: [https://eatalloftheburgers.herokuapp.com/]**
@@ -20,7 +20,6 @@
 - Express.js
 - Bootstrap
 - MySQL
-- ORM
 
 ## Installation
 ### To run locally: 
