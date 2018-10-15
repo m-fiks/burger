@@ -11,3 +11,9 @@ form {
     background: rgba(155, 165, 139, 0.274);
     border: solid 1px gainsboro;
 }
+
+.burger-info {
+    border: solid 1px gainsboro;
+    background: rgba(220, 220, 220, 0.384);
+    margin: 10px;
+}
