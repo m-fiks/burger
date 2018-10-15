@@ -1,8 +1,8 @@
 <br>
-<h1 style="font-family: 'Archivo Narrow', sans-serif;color:rgb(34, 26, 122)">Eat-Da-Burger!</h1>
+    <h1 style="font-family: 'Archivo Narrow', sans-serif;color:rgb(34, 26, 122)">Eat-Da-Burger!</h1>
 <br>
 <div class="row burger-info">
-<div class="col-xs-12 col-md-6">
+<div class="col-xs-12 col-md-4">
     <ul>
         <h5>Burgers</h5>
         {{#each burgers}}
@@ -21,7 +21,7 @@
     </ul>
 </div>
 
-<div class="col-xs-12 col-md-6" style="float:right">
+<div class="col-xs-12 col-md-4">
     <h5>Already Devoured</h5>
     <ul style="opacity:0.8">
         {{#each burgers}}
@@ -35,19 +35,15 @@
     </ul>
 </div>
 
+<!--add a burger-->
+<div class="col-xs-12 col-md-4">
+    <!-- user add in burger name - default to 0 for devoured-->
+    <form action="/burgers/create" method="POST">
+        <label>Submit a Burger</label>
+        <input name="new_burger" type="text" class="form-control">
+        <br>
+        <button class="btn btn-warning" style="font-family: 'Archivo Narrow', sans-serif">Submit</button>
+    </form>
 </div>
 
-<!--add a burger-->
-<div class="row">
-    <div class="col-xs-12 col-md-3"></div>
-    <div class="col-xs-12 col-md-6">
-        <!-- user add in burger name - default to 0 for devoured-->
-        <form action="/burgers/create" method="POST">
-            <label>Submit a Burger</label>
-            <input name="new_burger" type="text" class="form-control">
-            <br>
-            <button class="btn btn-info" style="font-family: 'Archivo Narrow', sans-serif">Submit</button>
-        </form>
-    </div>
-    <div class="col-xs-12 col-md-3"></div>
 </div>
